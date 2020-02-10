@@ -40,6 +40,7 @@ module.exports = env => ({
   plugins: [
     new HtmlWebpackPlugin({
       template: './index.html',
+      filename: './index.html',
       minify: {
         collapseWhitespace: true,
         removeComments: true,
@@ -49,6 +50,19 @@ module.exports = env => ({
         useShortDoctype: true,
       },
     }),
+    new HtmlWebpackPlugin({
+      template: './static/pages/identify/index-identify.html',
+      filename: './static/pages/identify/index-identify.html',
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true,
+      },
+    }),
+
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
       chunkFilename: '[name].[id].[contenthash].css',
