@@ -3,14 +3,15 @@
   margin: auto auto;
 }
 .container,
-.wrap {
+.wrap,
+.flex {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .indentation {
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 ul {
@@ -135,7 +136,8 @@ ul {
 
 @media screen and (min-width: 768px) {
   .container,
-  .wrap {
+  .wrap,
+  .flex {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

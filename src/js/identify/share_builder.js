@@ -5,10 +5,10 @@ import usage from './usage.json';
 import itemsTemplate from '../../templates/share_questions.hbs';
 
 const refs = {
-  postLocation: document.querySelector('.Place'),
-  postPayment: document.querySelector('.Payment'),
-  postLoyality: document.querySelector('.Loyality'),
-  postUsage: document.querySelector('.Usage'),
+  postLocation: document.getElementById('Place'),
+  postPayment: document.getElementById('Payment'),
+  postLoyality: document.getElementById('Loyality'),
+  postUsage: document.getElementById('Usage'),
 };
 
 buildLocationPage(location);

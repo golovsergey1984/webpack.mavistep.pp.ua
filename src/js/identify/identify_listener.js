@@ -11,8 +11,8 @@ function getRadioValueLocation() {
   let rad = document.getElementsByName('place-name');
   answerPlace = radValue(rad);
   document.querySelector('.title').innerHTML = 'Укажите форму расчета';
-  document.querySelector('.Place').style.display = 'none';
-  document.querySelector('.Payment').style.display = 'block';
+  document.getElementById('Place').style.display = 'none';
+  document.getElementById('Payment').style.display = 'block';
 }
 window.getRadioValueLocation = getRadioValueLocation;
 window.getRadioValuePayment = getRadioValuePayment;
@@ -23,16 +23,16 @@ function getRadioValuePayment() {
   let rad = document.getElementsByName('payment');
   answerPayment = radValue(rad);
   document.querySelector('.title').innerHTML = 'Вы знакомы с Нашей продукцией';
-  document.querySelector('.Payment').style.display = 'none';
-  document.querySelector('.Loyality').style.display = 'block';
+  document.getElementById('Payment').style.display = 'none';
+  document.getElementById('Loyality').style.display = 'block';
 }
 
 function getRadioValueLoyality() {
   let rad = document.getElementsByName('loyality');
   answerLoyality = radValue(rad);
   document.querySelector('.title').innerHTML = 'Чем Вы обычно пользуетесь?';
-  document.querySelector('.Loyality').style.display = 'none';
-  document.querySelector('.Usage').style.display = 'block';
+  document.getElementById('Loyality').style.display = 'none';
+  document.getElementById('Usage').style.display = 'block';
 }
 
 function getRadioValueUsage() {
@@ -40,7 +40,7 @@ function getRadioValueUsage() {
   answerUsage = radValue(rad);
   alert(testReport());
   mail();
-  document.querySelector('Usage').style.display = 'none';
+  document.getElementById('Usage').style.display = 'none';
   /* document.querySelector(".Usage").style.display = "block"; */
 }
 
