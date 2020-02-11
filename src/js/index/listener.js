@@ -1,15 +1,12 @@
-/* import res from '../static/pages/identify/script_location.html';
-let a = res; */
-
 const refs = {
   btnStore: document.querySelector('.button1'),
-  imgStore: document.querySelector('.index-img-logo'),
+  imgStore: document.getElementById('logo'),
   btnYoutube: document.querySelector('.button2'),
-  imgYoutube: document.querySelector('.index-img-youtube'),
+  imgYoutube: document.getElementById('youtube'),
   btnCall: document.querySelector('.button3'),
-  imgCall: document.querySelector('.index-img-skype'),
+  imgCall: document.getElementById('skype'),
   btnNeed: document.querySelector('.button4'),
-  imgNeed: document.querySelector('.index-img-identify'),
+  imgNeed: document.getElementById('identify'),
 };
 
 // изменяем изображение на Инетрнет магазине
@@ -25,7 +22,6 @@ refs.btnStore.addEventListener('click', function() {
   let newTab = window.open();
   newTab.opener = null;
   newTab.location = 'https://mavistep.com.ua';
-  /*  const { vkQr } = require('../static/pages/identify/script_location.html'); */
 });
 
 // изменяем изображение на Youtube
@@ -86,7 +82,7 @@ refs.btnNeed.addEventListener('click', function() {
   let newTab = window.open();
   newTab.opener = null;
 
-  newTab.location = 'static/pages/identify/index-identify.html';
+  newTab.location = 'html/index-identify.html';
 });
 {
 }

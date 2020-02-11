@@ -8,8 +8,8 @@ module.exports = env => ({
   mode: env.mode,
   context: paths.SRC_DIR,
   entry: {
-    index: './index.js',
-    identify: './static/pages/index.js',
+    index: './entry/index.js',
+    identify: './entry/identify.js',
   },
   output: {
     path: paths.BUILD_DIR,
@@ -77,7 +77,7 @@ module.exports = env => ({
     new WebpackBar(),
     new CopyPlugin([
       { from: paths.SRC_DIR + '/images', to: `images` },
-      { from: paths.SRC_DIR + '/static', to: `static` },
+      /*  { from: paths.SRC_DIR + '/static', to: `static` }, */
     ]),
   ],
 });

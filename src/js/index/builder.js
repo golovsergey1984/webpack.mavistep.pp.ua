@@ -1,4 +1,4 @@
-import items from '../../static/questions/index.json';
+import items from './index.json';
 import itemsTemplate from '../../templates/index.hbs';
 
 const refs = {

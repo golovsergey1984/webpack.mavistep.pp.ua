@@ -1,0 +1,47 @@
+[
+  {
+    "li_class": "li-script",
+    "btn_class": "button-identify",
+    "input_name": "payment",
+    "input_value": "Наличная",
+    "input_id": "cash",
+    "input_class": "radio",
+    "onclick": "getRadioValuePayment()",
+    "label_for": "cash",
+    "img_src": "../../../images/Payment/cash.png",
+    "img_id": "img-cash",
+    "img_class": "img img-adds",
+    "img_title": "Форма расчета - наличная",
+    "img_alt": "Форма расчета - наличная"
+  },
+  {
+    "li_class": "li-script",
+    "btn_class": "button-identify",
+    "input_name": "payment",
+    "input_value": "Безналичная",
+    "input_id": "cashless",
+    "input_class": "radio",
+    "onclick": "getRadioValuePayment()",
+    "label_for": "cashless",
+    "img_src": "../../../images/Payment/cashless.png",
+    "img_id": "img-cashless",
+    "img_class": "img img-adds",
+    "img_title": "Форма расчета - безналичная",
+    "img_alt": "Форма расчета - безналичная"
+  },
+  {
+    "li_class": "li-script",
+    "btn_class": "button-identify",
+    "input_name": "payment",
+    "input_value": "Не планирую совершать покупку",
+    "input_id": "nomoney",
+    "input_class": "radio",
+    "onclick": "getRadioValuePayment()",
+    "label_for": "nomoney",
+    "img_src": "../../../images/Payment/nomoney.png",
+    "img_id": "img-nomoney",
+    "img_class": "img img-adds",
+    "img_title": "Я не планирую совершать покупку",
+    "img_alt": "Я не планирую совершать покупку"
+  }
+]

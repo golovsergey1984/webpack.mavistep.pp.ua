@@ -51,8 +51,8 @@ module.exports = env => ({
       },
     }),
     new HtmlWebpackPlugin({
-      template: './static/pages/identify/index-identify.html',
-      filename: './static/pages/identify/index-identify.html',
+      template: './html/index-identify.html',
+      filename: './html/index-identify.html',
       minify: {
         collapseWhitespace: true,
         removeComments: true,
