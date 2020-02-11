@@ -84,7 +84,7 @@
     "input_class": "radio",
     "onclick": "getRadioValueLocation()",
     "label_for": "DreamTawn",
-    "img_src": "../../../images/Malls/DreamTawn.png",
+    "img_src": "../images/Malls/DreamTawn.png",
     "img_id": "img-DreamTawn",
     "img_class": "img img-adds",
     "img_title": "DreamTawn",

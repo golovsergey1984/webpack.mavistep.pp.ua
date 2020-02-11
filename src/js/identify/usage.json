@@ -108,7 +108,7 @@
     "li_class": "li-script",
     "btn_class": "button-identify",
     "input_name": "usage",
-    "input_value": "Nothing",
+    "input_value": "Ничем",
     "input_id": "Nothing",
     "input_class": "radio",
     "onclick": "getRadioValueUsage()",
