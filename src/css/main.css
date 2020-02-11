@@ -2,12 +2,7 @@
   max-width: 1050px;
   margin: auto auto;
 }
-.container {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
+.container,
 .wrap {
   display: flex;
   flex-direction: column;
@@ -139,16 +134,7 @@ ul {
 }
 
 @media screen and (min-width: 768px) {
-  .container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    max-width: 1050px;
-  }
-
+  .container,
   .wrap {
     display: flex;
     flex-direction: row;
@@ -158,6 +144,7 @@ ul {
     text-align: center;
     max-width: 1050px;
   }
+
   li {
     width: 350px;
   }
