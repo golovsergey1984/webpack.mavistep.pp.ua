@@ -93,7 +93,7 @@
     "li_class": "li-script",
     "btn_class": "button-identify",
     "input_name": "usage",
-    "input_value": "DoNotKnow",
+    "input_value": "Не помню и/или не знаю",
     "input_id": "DoNotKnow",
     "input_class": "radio",
     "onclick": "getRadioValueUsage()",
