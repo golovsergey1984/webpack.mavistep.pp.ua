@@ -3,11 +3,13 @@
   margin: auto auto;
 }
 .container,
-.wrap,
-.flex {
+.wrap {
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .indentation {
@@ -71,21 +73,21 @@ ul {
 }
 
 /* Стили для страницы "Your need.html" */
-.place {
+/* .place {
   display: block;
-}
+} */
 
-.Payment {
+/* .ppp {
   display: none;
 }
 
-.Loyality {
+.lll {
   display: none;
 }
 
-.Usage {
+.uuu {
   display: none;
-}
+} */
 
 .title {
   text-align: center;
@@ -101,7 +103,7 @@ ul {
   list-style-type: none;
   margin: 0px;
   padding: 0;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 .radio {

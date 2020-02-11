@@ -12,6 +12,7 @@ function getRadioValueLocation() {
   answerPlace = radValue(rad);
   document.querySelector('.title').innerHTML = 'Укажите форму расчета';
   document.getElementById('Place').style.display = 'none';
+  /* document.getElementById('Place').style.display = 'none'; */
   document.getElementById('Payment').style.display = 'block';
 }
 window.getRadioValueLocation = getRadioValueLocation;
