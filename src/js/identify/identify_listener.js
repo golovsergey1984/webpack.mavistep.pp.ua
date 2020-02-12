@@ -7,18 +7,19 @@ let answerPayment = '';
 let answerLoyality = '';
 let answerUsage = '';
 
-/* window.addEventListener('beforeunload', mail()); */
+window.addEventListener('beforeunload', event => {
+  event.preventDefault();
+  setTimeout(closeWindow, 500);
+});
 
 function closeWindow() {
   mail();
-  alert(testReport());
-  window.close();
+  setTimeout(close, 500);
 }
 
-/* async function windowClose() {
-  const a = await mail();
-  await a.window.close();
-} */
+function close() {
+  window.close();
+}
 
 function getRadioValueLocation() {
   let rad = document.getElementsByName('place-name');
