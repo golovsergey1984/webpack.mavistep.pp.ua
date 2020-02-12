@@ -50,8 +50,17 @@
     "webpackbar": "^4.0.0"
   },
   "dependencies": {
+    "child_process": "^1.0.2",
     "core-js": "^3.3.4",
+    "dgram": "^1.0.1",
+    "dns": "^0.2.2",
+    "ejs": "^3.0.1",
+    "fs": "0.0.1-security",
+    "gmail-send": "^1.8.10",
     "handlebars": "^4.5.3",
-    "image-webpack-loader": "^6.0.0"
+    "image-webpack-loader": "^6.0.0",
+    "net": "^1.0.2",
+    "sendmail": "^1.6.1",
+    "tls": "0.0.1"
   }
 }

@@ -84,5 +84,3 @@ refs.btnNeed.addEventListener('click', function() {
 
   newTab.location = 'html/index-identify.html';
 });
-{
-}

@@ -62,7 +62,10 @@ module.exports = env => ({
         useShortDoctype: true,
       },
     }),
-
+    new HtmlWebpackPlugin({
+      template: './favicon.ico',
+      filename: './favicon.ico',
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
       chunkFilename: '[name].[id].[contenthash].css',

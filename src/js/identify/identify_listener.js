@@ -12,7 +12,7 @@ function getRadioValueLocation() {
   answerPlace = radValue(rad);
   document.querySelector('.title').innerHTML = 'Укажите форму расчета';
   document.getElementById('Place').style.display = 'none';
-  /* document.getElementById('Place').style.display = 'none'; */
+
   document.getElementById('Payment').style.display = 'block';
 }
 window.getRadioValueLocation = getRadioValueLocation;
@@ -41,6 +41,7 @@ function getRadioValueUsage() {
   answerUsage = radValue(rad);
   alert(testReport());
   mail();
+
   document.getElementById('Usage').style.display = 'none';
   /* document.querySelector(".Usage").style.display = "block"; */
 }
@@ -120,16 +121,15 @@ function report() {
 
 function mail() {
   let stat = report();
-  console.log(stat);
   Email.send({
     Host: 'smtp.gmail.com',
-    Username: 'golovsergey1984',
-    Password: 'Sergio1984',
-    To: 'golovsergey1984@gmail.com',
-    From: 'golovsergey1984@gmail.com',
+    Username: 'mavistepreport',
+    Password: 'MaviStep1996',
+    To: 'mavistepreport@gmail.com',
+    From: 'mavistepreport@gmail.com',
     Subject: 'customer statistics',
     Body: stat,
-  }).then(message => alert(message));
+  });
 }
 
 // Тестовая функция!!
