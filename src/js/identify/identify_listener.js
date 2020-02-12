@@ -7,6 +7,19 @@ let answerPayment = '';
 let answerLoyality = '';
 let answerUsage = '';
 
+/* window.addEventListener('beforeunload', mail()); */
+
+function closeWindow() {
+  mail();
+  alert(testReport());
+  window.close();
+}
+
+/* async function windowClose() {
+  const a = await mail();
+  await a.window.close();
+} */
+
 function getRadioValueLocation() {
   let rad = document.getElementsByName('place-name');
   answerPlace = radValue(rad);
@@ -19,6 +32,7 @@ window.getRadioValueLocation = getRadioValueLocation;
 window.getRadioValuePayment = getRadioValuePayment;
 window.getRadioValueLoyality = getRadioValueLoyality;
 window.getRadioValueUsage = getRadioValueUsage;
+window.closeWindow = closeWindow;
 
 function getRadioValuePayment() {
   let rad = document.getElementsByName('payment');
