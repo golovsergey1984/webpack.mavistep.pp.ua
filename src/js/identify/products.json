@@ -1,0 +1,47 @@
+[
+  {
+    "li_class": "li-script",
+    "btn_class": "button-identify",
+    "input_name": "products",
+    "input_value": "Косметика",
+    "input_id": "cosmetics",
+    "input_class": "radio",
+    "onclick": "getRadioValueProducts()",
+    "label_for": "cosmetics",
+    "img_src": "../images/Products/cosmetics.png",
+    "img_id": "img-cosmetics",
+    "img_class": "img img-adds",
+    "img_title": "Меня интересует косметика",
+    "img_alt": "Меня интересует косметика"
+  },
+  {
+    "li_class": "li-script",
+    "btn_class": "button-identify",
+    "input_name": "products",
+    "input_value": "Стельки",
+    "input_id": "insoles",
+    "input_class": "radio",
+    "onclick": "getRadioValueProducts()",
+    "label_for": "insoles",
+    "img_src": "",
+    "img_id": "img-insoles",
+    "img_class": "img img-adds",
+    "img_title": "Меня интересуют стельки",
+    "img_alt": "Меня интересуют стельки"
+  },
+  {
+    "li_class": "li-script",
+    "btn_class": "button-identify",
+    "input_name": "products",
+    "input_value": "Аксессуары",
+    "input_id": "accessories",
+    "input_class": "radio",
+    "onclick": "getRadioValueProducts()",
+    "label_for": "accessories",
+    "img_src": "",
+    "img_id": "img-accessories",
+    "img_class": "img img-adds",
+    "img_title": "Меня интересуют аксессуары",
+    "img_alt": "Меня интересуют аксессуары"
+  }
+]

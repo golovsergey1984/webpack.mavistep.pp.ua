@@ -2,6 +2,7 @@ import location from './location.json';
 import payment from './payment.json';
 import loyality from './loyality.json';
 import usage from './usage.json';
+import products from './products.json';
 import itemsTemplate from '../../templates/share_questions.hbs';
 
 const refs = {
@@ -9,6 +10,7 @@ const refs = {
   postPayment: document.getElementById('Payment'),
   postLoyality: document.getElementById('Loyality'),
   postUsage: document.getElementById('Usage'),
+  postProducts: document.getElementById('Products'),
 };
 
 buildLocationPage(location);
@@ -33,4 +35,10 @@ buildUsagePage(usage);
 function buildUsagePage(items) {
   const markup = items.map(item => itemsTemplate(item)).join('');
   refs.postUsage.insertAdjacentHTML('beforeend', markup);
+}
+
+buildProductsPage(products);
+function buildProductsPage(items) {
+  const markup = items.map(item => itemsTemplate(item)).join('');
+  refs.postProducts.insertAdjacentHTML('beforeend', markup);
 }

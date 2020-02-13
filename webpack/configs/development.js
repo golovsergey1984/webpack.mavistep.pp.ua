@@ -27,10 +27,10 @@ module.exports = env => ({
       template: './html/index-identify.html',
       filename: './html/index-identify.html',
     }),
-    new HtmlWebpackPlugin({
-      template: './favicon.ico',
-      filename: './favicon.ico',
-    }),
+    /*     new HtmlWebpackPlugin({
+      template: './favicon/favicon.ico',
+      filename: './favicon/favicon.ico',
+    }), */
   ],
   devServer: {
     contentBase: paths.BUILD_DIR,

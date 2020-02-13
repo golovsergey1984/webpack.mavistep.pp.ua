@@ -6,10 +6,11 @@ let time = getTime();
 let answerPayment = '';
 let answerLoyality = '';
 let answerUsage = '';
+let answerProduct = '';
 
 window.addEventListener('beforeunload', event => {
-  event.preventDefault();
-  setTimeout(closeWindow, 500);
+  mail();
+  setTimeout(close, 500);
 });
 
 function closeWindow() {
@@ -33,6 +34,7 @@ window.getRadioValueLocation = getRadioValueLocation;
 window.getRadioValuePayment = getRadioValuePayment;
 window.getRadioValueLoyality = getRadioValueLoyality;
 window.getRadioValueUsage = getRadioValueUsage;
+window.getRadioValueProducts = getRadioValueProducts;
 window.closeWindow = closeWindow;
 
 function getRadioValuePayment() {
@@ -54,11 +56,20 @@ function getRadioValueLoyality() {
 function getRadioValueUsage() {
   let rad = document.getElementsByName('usage');
   answerUsage = radValue(rad);
+  document.querySelector('.title').innerHTML =
+    'Укажите интересующую группу товаров';
+  document.getElementById('Usage').style.display = 'none';
+  document.getElementById('Products').style.display = 'block';
+}
+
+function getRadioValueProducts() {
+  let rad = document.getElementsByName('products');
+  answerProduct = radValue(rad);
   alert(testReport());
   mail();
 
-  document.getElementById('Usage').style.display = 'none';
-  /* document.querySelector(".Usage").style.display = "block"; */
+  document.getElementById('Products').style.display = 'none';
+  /* document.getElementById('Products').style.display = 'block'; */
 }
 
 function radValue(rad) {
@@ -130,7 +141,10 @@ function report() {
     answerLoyality +
     '<br />' +
     '<strong>1.3 Пользуется: </strong>' +
-    answerUsage
+    answerUsage +
+    '<br />' +
+    '<strong>1.4 Группа запроса: </strong>' +
+    answerProduct
   );
 }
 
@@ -165,10 +179,13 @@ function testReport() {
     '1.1 Форма расчета: ' +
     answerPayment +
     '\r\n' +
-    '1.2 С Наше продукцией: ' +
+    '1.2 С Нашей продукцией: ' +
     answerLoyality +
     '\r\n' +
     '1.3 Пользуется: ' +
-    answerUsage
+    answerUsage +
+    '\r\n' +
+    '1.4 Группа запроса: ' +
+    answerProduct
   );
 }
