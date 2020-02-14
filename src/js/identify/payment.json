@@ -8,11 +8,9 @@
     "input_class": "radio",
     "onclick": "getRadioValuePayment()",
     "label_for": "cash",
-    "img_src": "../images/Payment/cash.png",
-    "img_id": "img-cash",
-    "img_class": "img img-adds",
-    "img_title": "Форма расчета - наличная",
-    "img_alt": "Форма расчета - наличная"
+    "btn_bg": "background-image: url(../images/Payment/cash.png);",
+    "btn_mouse_on": "style='background-image: url(../images/Payment/cash_hover.png);'",
+    "btn_mouse_out": "style='background-image: url(../images/MPayment/cash.png);'"
   },
   {
     "li_class": "li-script",
@@ -23,11 +21,9 @@
     "input_class": "radio",
     "onclick": "getRadioValuePayment()",
     "label_for": "cashless",
-    "img_src": "../images/Payment/cashless.png",
-    "img_id": "img-cashless",
-    "img_class": "img img-adds",
-    "img_title": "Форма расчета - безналичная",
-    "img_alt": "Форма расчета - безналичная"
+    "btn_bg": "background-image: url(../images/Payment/cashless.png);",
+    "btn_mouse_on": "style='background-image: url(../images/Payment/cashless_hover.png);'",
+    "btn_mouse_out": "style='background-image: url(../images/Payment/cashless.png);'"
   },
   {
     "li_class": "li-script",
@@ -39,9 +35,8 @@
     "onclick": "getRadioValuePayment()",
     "label_for": "nomoney",
     "img_src": "../images/Payment/nomoney.png",
-    "img_id": "img-nomoney",
-    "img_class": "img img-adds",
-    "img_title": "Я не планирую совершать покупку",
-    "img_alt": "Я не планирую совершать покупку"
+    "btn_bg": "background-image: url(../images/Payment/nomoney.png);",
+    "btn_mouse_on": "style='background-image: url(../images/Payment/nomoney_hover.png);'",
+    "btn_mouse_out": "style='background-image: url(../images/MPayment/nomoney.png);'"
   }
 ]

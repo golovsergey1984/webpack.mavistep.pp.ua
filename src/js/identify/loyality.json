@@ -9,10 +9,9 @@
     "onclick": "getRadioValueLoyality()",
     "label_for": "know",
     "img_src": "../images/Loyality/Yes.png",
-    "img_id": "img-know",
-    "img_class": "img img-adds",
-    "img_title": "Я знаком с продукцией MAVI STEP",
-    "img_alt": "Я знаком с продукцией MAVI STEP"
+    "btn_bg": "background-image: url(../images/Loyality/Yes.png);",
+    "btn_mouse_on": "style='background-image: url(../images/Loyality/Yes_hover.png);'",
+    "btn_mouse_out": "style='background-image: url(../images/Loyality/Yes.png);'"
   },
   {
     "li_class": "li-script",
@@ -23,10 +22,8 @@
     "input_class": "radio",
     "onclick": "getRadioValueLoyality()",
     "label_for": "notKnow",
-    "img_src": "../images/Loyality/No.png",
-    "img_id": "img-notKnow",
-    "img_class": "img img-adds",
-    "img_title": "Я не знаком с продукцией MAVI STEP",
-    "img_alt": "Я не знаком с продукцией MAVI STEP"
+    "btn_bg": "background-image: url(../images/Loyality/No.png);",
+    "btn_mouse_on": "style='background-image: url(../images/Loyality/No_hover.png);'",
+    "btn_mouse_out": "style='background-image: url(../images/Loyality/No.png);'"
   }
 ]
