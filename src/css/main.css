@@ -1,3 +1,6 @@
+body {
+  background-color: #f8f8f8;
+}
 .wrapper {
   max-width: 1050px;
   margin: auto auto;
