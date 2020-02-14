@@ -3,11 +3,16 @@
 let answerPlace = '';
 let date = getDate();
 let time = getTime();
+let clockTime = clock();
+
 let answerPayment = '';
 let answerLoyality = '';
 let answerUsage = '';
 let answerProduct = '';
 
+/* window.addEventListener('onload', event => {
+  clock();
+}); */
 window.addEventListener('beforeunload', event => {
   mail();
   setTimeout(close, 500);
@@ -22,9 +27,63 @@ function close() {
   window.close();
 }
 
+/* function clock() {
+  var date = new Date(),
+    hours = date.getHours() < 10 ? '0' + date.getHours() : date.getHours(),
+    minutes =
+      date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes(),
+    seconds =
+      date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds();
+  console.log(hours + ':' + minutes + ':' + seconds);
+  return hours + ':' + minutes;
+}
+setInterval(clock, 1000); */
+
+function clock() {
+  let S = '00',
+    M = '00',
+    H = '00';
+
+  setInterval(function() {
+    //Плюсик перед строкой преобразует его в число
+    S = +S + 1;
+    //Если результат меньше 10, прибавляем впереди строку '0'
+    if (S < 10) {
+      S = '0' + S;
+    }
+    if (S == 60) {
+      S = '00';
+      //Как только секунд стало 60, добавляем +1 к минутам
+      M = +M + 1;
+      //Дальше то же самое, что и для секунд
+      if (M < 10) {
+        M = '0' + M;
+      }
+      if (M == 60) {
+        //Как только минут стало 60, добавляем +1 к часам.
+        M = '00';
+        H = +H + 1;
+        if (H < 10) {
+          H = '0' + H;
+        }
+      }
+    }
+
+    /*     console.log(H + ':' + M + ':' + S); */
+    return (clockTime = H + ':' + M + ':' + S);
+    /* return H + ' ' + M + ' ' + S + ' ' + ' г.'; */
+
+    /*     secs.innerText = S;
+    mins.innerText = M;
+    hour.innerText = H; */
+    //Тикает всё через одну функцию, раз в секунду.
+  }, 1000);
+}
+
 function getRadioValueLocation() {
   let rad = document.getElementsByName('place-name');
   answerPlace = radValue(rad);
+
   document.querySelector('.title').innerHTML = 'Укажите форму расчета';
   document.getElementById('Place').style.display = 'none';
 
@@ -48,6 +107,7 @@ function getRadioValuePayment() {
 function getRadioValueLoyality() {
   let rad = document.getElementsByName('loyality');
   answerLoyality = radValue(rad);
+
   document.querySelector('.title').innerHTML = 'Чем Вы обычно пользуетесь?';
   document.getElementById('Loyality').style.display = 'none';
   document.getElementById('Usage').style.display = 'block';
@@ -66,7 +126,8 @@ function getRadioValueProducts() {
   let rad = document.getElementsByName('products');
   answerProduct = radValue(rad);
   alert(testReport());
-  mail();
+
+  /*  mail(); */
 
   document.getElementById('Products').style.display = 'none';
   /* document.getElementById('Products').style.display = 'block'; */
@@ -131,6 +192,9 @@ function report() {
     '<strong>Время: </strong>' +
     time +
     '<br />' +
+    '<strong>Длительность: </strong>' +
+    clockTime +
+    '<br />' +
     '<br />' +
     '<strong>_____1. ОБЩЯЯ ИНФОРМАЦИЯ_____</strong>' +
     '<br />' +
@@ -172,6 +236,9 @@ function testReport() {
     '\r\n' +
     'Время: ' +
     time +
+    '\r\n' +
+    'Длительность: ' +
+    clockTime +
     '\r\n' +
     '\r\n' +
     '_____1. ОБЩЯЯ ИНФОРМАЦИЯ_____' +

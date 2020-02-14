@@ -9,10 +9,9 @@
     "onclick": "getRadioValueProducts()",
     "label_for": "cosmetics",
     "img_src": "../images/Products/cosmetics.png",
-    "img_id": "img-cosmetics",
-    "img_class": "img img-adds",
-    "img_title": "Меня интересует косметика",
-    "img_alt": "Меня интересует косметика"
+    "btn_bg": "background-image: url(../images/Products/cosmetics.png);",
+    "btn_mouse_on": "style='background-image: url(../images/Products/cosmetics_hover.png);'",
+    "btn_mouse_out": "style='background-image: url(../images/Products/cosmetics.png);'"
   },
   {
     "li_class": "li-script",

@@ -9,10 +9,9 @@
     "onclick": "getRadioValueUsage()",
     "label_for": "Collonil",
     "img_src": "../images/Usage/Collonil.png",
-    "img_id": "img-Collonil",
-    "img_class": "img img-adds",
-    "img_title": "Я пользуюсь Collonil",
-    "img_alt": "Я пользуюсь Collonil"
+    "btn_bg": "background-image: url(../images/Usage/Collonil.png);",
+    "btn_mouse_on": "style='background-image: url(../images/Usage/Collonil_hover.png);'",
+    "btn_mouse_out": "style='background-image: url(../images/Usage/Collonil.png);'"
   },
   {
     "li_class": "li-script",
@@ -23,11 +22,9 @@
     "input_class": "radio",
     "onclick": "getRadioValueUsage()",
     "label_for": "Silver",
-    "img_src": "../images/Usage/Silver.png",
-    "img_id": "img-Silver",
-    "img_class": "img img-adds",
-    "img_title": "Я пользуюсь Silver",
-    "img_alt": "Я пользуюсь Silver"
+    "btn_bg": "background-image: url(../images/Usage/Silver.png);",
+    "btn_mouse_on": "style='background-image: url(../images/Usage/Silver_hover.png);'",
+    "btn_mouse_out": "style='background-image: url(../images/Usage/Silver.png);'"
   },
   {
     "li_class": "li-script",
@@ -38,11 +35,9 @@
     "input_class": "radio",
     "onclick": "getRadioValueUsage()",
     "label_for": "Salton",
-    "img_src": "../images/Usage/Salton.png",
-    "img_id": "img-Salton",
-    "img_class": "img img-adds",
-    "img_title": "Я пользуюсь Salton",
-    "img_alt": "Я пользуюсь Salton"
+    "btn_bg": "background-image: url(../images/Usage/Salton.png);",
+    "btn_mouse_on": "style='background-image: url(../images/Usage/Salton_hover.png);'",
+    "btn_mouse_out": "style='background-image: url(../images/Usage/Salton.png);'"
   },
   {
     "li_class": "li-script",
@@ -53,11 +48,9 @@
     "input_class": "radio",
     "onclick": "getRadioValueUsage()",
     "label_for": "Salamander",
-    "img_src": "../images/Usage/Salamander.png",
-    "img_id": "img-Salamander",
-    "img_class": "img img-adds",
-    "img_title": "Я пользуюсь Salamander",
-    "img_alt": "Я пользуюсь Salamander"
+    "btn_bg": "background-image: url(../images/Usage/Salamander.png);",
+    "btn_mouse_on": "style='background-image: url(../images/Usage/Salamander_hover.png);'",
+    "btn_mouse_out": "style='background-image: url(../images/Usage/Salamander.png);'"
   },
   {
     "li_class": "li-script",
@@ -68,11 +61,9 @@
     "input_class": "radio",
     "onclick": "getRadioValueUsage()",
     "label_for": "Tarrago",
-    "img_src": "../images/Usage/Tarrago.png",
-    "img_id": "img-Tarrago",
-    "img_class": "img img-adds",
-    "img_title": "Я пользуюсь Tarrago",
-    "img_alt": "Я пользуюсь Tarrago"
+    "btn_bg": "background-image: url(../images/Usage/Tarrago.png);",
+    "btn_mouse_on": "style='background-image: url(../images/Usage/Tarrago_hover.png);'",
+    "btn_mouse_out": "style='background-image: url(../images/Usage/Tarrago.png);'"
   },
   {
     "li_class": "li-script",
@@ -82,12 +73,10 @@
     "input_id": "Saphir",
     "input_class": "radio",
     "onclick": "getRadioValueUsage()",
-    "label_for": "Saphirr",
-    "img_src": "../images/Usage/Saphir.png",
-    "img_id": "img-Saphir",
-    "img_class": "img img-adds",
-    "img_title": "Я пользуюсь Saphir",
-    "img_alt": "Я пользуюсь Saphir"
+    "label_for": "Saphir",
+    "btn_bg": "background-image: url(../images/Usage/Saphir.png);",
+    "btn_mouse_on": "style='background-image: url(../images/Usage/Saphir_hover.png);'",
+    "btn_mouse_out": "style='background-image: url(../images/Usage/Saphir.png);'"
   },
   {
     "li_class": "li-script",
@@ -98,11 +87,9 @@
     "input_class": "radio",
     "onclick": "getRadioValueUsage()",
     "label_for": "DoNotKnow",
-    "img_src": "../images/Usage/DoNotKnow.png",
-    "img_id": "img-DoNotKnow",
-    "img_class": "img img-adds",
-    "img_title": "Не помню и/или не знаю",
-    "img_alt": "Не помню и/или не знаю"
+    "btn_bg": "background-image: url(../images/Usage/DoNotKnow.png);",
+    "btn_mouse_on": "style='background-image: url(../images/Usage/DoNotKnow_hover.png);'",
+    "btn_mouse_out": "style='background-image: url(../images/Usage/DoNotKnow.png);'"
   },
   {
     "li_class": "li-script",
@@ -113,10 +100,8 @@
     "input_class": "radio",
     "onclick": "getRadioValueUsage()",
     "label_for": "Nothing",
-    "img_src": "../images/Usage/Nothing.png",
-    "img_id": "img-Nothing",
-    "img_class": "img img-adds",
-    "img_title": "Я ничем не пользуюсь",
-    "img_alt": "Я ничем не пользуюсь"
+    "btn_bg": "background-image: url(../images/Usage/Nothing.png);",
+    "btn_mouse_on": "style='background-image: url(../images/Usage/Nothing_hover.png);'",
+    "btn_mouse_out": "style='background-image: url(../images/Usage/Nothing.png);'"
   }
 ]

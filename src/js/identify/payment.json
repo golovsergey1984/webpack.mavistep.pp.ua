@@ -10,7 +10,7 @@
     "label_for": "cash",
     "btn_bg": "background-image: url(../images/Payment/cash.png);",
     "btn_mouse_on": "style='background-image: url(../images/Payment/cash_hover.png);'",
-    "btn_mouse_out": "style='background-image: url(../images/MPayment/cash.png);'"
+    "btn_mouse_out": "style='background-image: url(../images/Payment/cash.png);'"
   },
   {
     "li_class": "li-script",
@@ -34,9 +34,8 @@
     "input_class": "radio",
     "onclick": "getRadioValuePayment()",
     "label_for": "nomoney",
-    "img_src": "../images/Payment/nomoney.png",
     "btn_bg": "background-image: url(../images/Payment/nomoney.png);",
     "btn_mouse_on": "style='background-image: url(../images/Payment/nomoney_hover.png);'",
-    "btn_mouse_out": "style='background-image: url(../images/MPayment/nomoney.png);'"
+    "btn_mouse_out": "style='background-image: url(../images/Payment/nomoney.png);'"
   }
 ]
