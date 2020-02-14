@@ -10,9 +10,6 @@ let answerLoyality = '';
 let answerUsage = '';
 let answerProduct = '';
 
-/* window.addEventListener('onload', event => {
-  clock();
-}); */
 window.addEventListener('beforeunload', event => {
   mail();
   setTimeout(close, 500);
