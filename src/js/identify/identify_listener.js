@@ -124,8 +124,8 @@ function getRadioValueProducts() {
   answerProduct = radValue(rad);
   alert(testReport());
 
-  /*  mail(); */
-
+  mail();
+  setTimeout(close, 500);
   /* document.getElementById('Products').style.display = 'none'; */
   /* document.getElementById('Products').style.display = 'block'; */
 }
