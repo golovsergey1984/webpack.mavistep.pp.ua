@@ -126,7 +126,7 @@ function getRadioValueProducts() {
 
   /*  mail(); */
 
-  document.getElementById('Products').style.display = 'none';
+  /* document.getElementById('Products').style.display = 'none'; */
   /* document.getElementById('Products').style.display = 'block'; */
 }
 

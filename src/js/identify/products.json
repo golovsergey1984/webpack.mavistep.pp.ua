@@ -9,9 +9,9 @@
     "onclick": "getRadioValueProducts()",
     "label_for": "cosmetics",
     "img_src": "../images/Products/cosmetics.png",
-    "btn_bg": "background-image: url(../images/Products/cosmetics.png);",
-    "btn_mouse_on": "style='background-image: url(../images/Products/cosmetics_hover.png);'",
-    "btn_mouse_out": "style='background-image: url(../images/Products/cosmetics.png);'"
+    "btn_bg": "background-image: url(../images/Products/Cosmetics.png);",
+    "btn_mouse_on": "style='background-image: url(../images/Products/Cosmetics_hover.png);'",
+    "btn_mouse_out": "style='background-image: url(../images/Products/Cosmetics.png);'"
   },
   {
     "li_class": "li-script",
@@ -22,11 +22,22 @@
     "input_class": "radio",
     "onclick": "getRadioValueProducts()",
     "label_for": "insoles",
-    "img_src": "",
-    "img_id": "img-insoles",
-    "img_class": "img img-adds",
-    "img_title": "Меня интересуют стельки",
-    "img_alt": "Меня интересуют стельки"
+    "btn_bg": "background-image: url(../images/Products/Insoles.png);",
+    "btn_mouse_on": "style='background-image: url(../images/Products/Insoles_hover.png);'",
+    "btn_mouse_out": "style='background-image: url(../images/Products/Insoles.png);'"
+  },
+  {
+    "li_class": "li-script",
+    "btn_class": "button-identify",
+    "input_name": "products",
+    "input_value": "Обувь",
+    "input_id": "shoe",
+    "input_class": "radio",
+    "onclick": "getRadioValueProducts()",
+    "label_for": "shoe",
+    "btn_bg": "background-image: url(../images/Products/Shoe.png);",
+    "btn_mouse_on": "style='background-image: url(../images/Products/Shoe_hover.png);'",
+    "btn_mouse_out": "style='background-image: url(../images/Products/Shoe.png);'"
   },
   {
     "li_class": "li-script",
@@ -37,10 +48,21 @@
     "input_class": "radio",
     "onclick": "getRadioValueProducts()",
     "label_for": "accessories",
-    "img_src": "",
-    "img_id": "img-accessories",
-    "img_class": "img img-adds",
-    "img_title": "Меня интересуют аксессуары",
-    "img_alt": "Меня интересуют аксессуары"
+    "btn_bg": "background-image: url(../images/Products/Accessories.png);",
+    "btn_mouse_on": "style='background-image: url(../images/Products/Accessories_hover.png);'",
+    "btn_mouse_out": "style='background-image: url(../images/Products/Accessories.png);'"
+  },
+  {
+    "li_class": "li-script",
+    "btn_class": "button-identify",
+    "input_name": "products",
+    "input_value": "Щетки",
+    "input_id": "brushes",
+    "input_class": "radio",
+    "onclick": "getRadioValueProducts()",
+    "label_for": "brushes",
+    "btn_bg": "background-image: url(../images/Products/Brush.png);",
+    "btn_mouse_on": "style='background-image: url(../images/Products/Brush_hover.png);'",
+    "btn_mouse_out": "style='background-image: url(../images/Products/Brush.png);'"
   }
 ]
