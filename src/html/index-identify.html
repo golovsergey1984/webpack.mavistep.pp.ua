@@ -9,23 +9,51 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Identify your need</title>
     <link href="../favicon/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons" />
 
 </head>
 
 <body>
 
     <div class="wrapper">
-        <button class="btn-nav prev" id="prev-btn" onclick="">Prev</button>
+        <button class="btn-nav prev" id="prev-btn" onclick="prevPage()">Back</button>
         <button class="btn-nav exit" id="exit-btn" onclick="closeWindow()">exit</button>
-        <h1 class="title">Где Вы находитесь?</h1>
 
         <ul class="wrap">
-            <ul class="flex" id="Place"></ul>
-            <ul class="flex indentation" style="display:none" id="Payment"></ul>
+            <div class="" id="Place">
+                <h1 class="title">Где Вы находитесь?</h1>
+                <ul class="flex" name="Place"></ul>
+            </div>
+            <div class="display" id="Payment">
+                <h1 class="title">Укажите форму расчета</h1>
+                <ul class="flex" name="Place"></ul>
+            </div>
+            <div class="display" id="Loyality">
+                <h1 class="title">Вы знакомы с Нашей продукцией?</h1>
+                <ul class="flex" name="Place"></ul>
+            </div>
+            <div class="display" id="Usage">
+                <h1 class="title">Чем Вы обычно пользуетесь?</h1>
+                <ul class="flex" name="Place"></ul>
+            </div>
+            <div class="display" id="Products">
+                <h1 class="title">Укажите интересующую группу товаров</h1>
+                <ul class="flex" name="Place"></ul>
+            </div>
+
+        </ul>
+
+
+
+        <!--        
+    
+    <ul class="wrap">
+            <ul class="flex" id="Place" name="Place"></ul>
+            <ul class="flex indentation" style="display:none" value="" id="Payment"></ul>
             <ul class="flex indentation" style=" display:none" id="Loyality"></ul>
             <ul class="flex" style="display:none" id="Usage"></ul>
             <ul class="flex indentation" style=" display:none" id="Products"></ul>
-        </ul>
+        </ul> -->
     </div>
 
     <script src="https://smtpjs.com/v3/smtp.js">

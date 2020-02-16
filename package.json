@@ -59,7 +59,9 @@
     "gmail-send": "^1.8.10",
     "handlebars": "^4.5.3",
     "image-webpack-loader": "^6.0.0",
+    "material-design-icons": "^3.0.1",
     "net": "^1.0.2",
+    "pnotify": "^4.0.0",
     "sendmail": "^1.6.1",
     "tls": "0.0.1"
   }

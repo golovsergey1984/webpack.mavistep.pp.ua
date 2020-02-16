@@ -24,6 +24,10 @@ body {
   text-align: center;
 }
 
+.display {
+  display: none;
+}
+
 ul {
   padding: 0;
   margin: 0;
