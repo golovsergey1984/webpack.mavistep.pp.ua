@@ -7,9 +7,9 @@
     "btn_type": "submit",
     "btn_id": "",
     "btn_class": "button",
-    "btn_bg": "background-image: url(../images/logo.png);",
-    "btn_mouse_on": "style='background-image: url(../images/logo_hover.png);'",
-    "btn_mouse_out": "style='background-image: url(../images/logo.png);'",
+    "btn_bg": "background-image: url(./images/logo.png);",
+    "btn_mouse_on": "style='background-image: url(./images/logo_hover.png);'",
+    "btn_mouse_out": "style='background-image: url(./images/logo.png);'",
     "h2_class": "text",
     "h2_text": ""
   },
