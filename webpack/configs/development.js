@@ -21,12 +21,13 @@ module.exports = env => ({
   plugins: [
     new HtmlWebpackPlugin({
       inject: false,
-      title: 'My App',
-      template: './index.html',
+      title: 'MAVI STEP',
       filename: './index.html',
+      template: './index.html',
     }),
     new HtmlWebpackPlugin({
       inject: false,
+      title: 'Identify',
       template: './html/index-identify.html',
       filename: './html/index-identify.html',
     }),

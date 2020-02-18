@@ -63,7 +63,8 @@ module.exports = env => ({
       },
       {
         test: /\.html$/,
-        use: 'html-loader',
+        use: 'underscore-template-loader',
+        /* use: 'html-loader', */
       },
       {
         test: /\.hbs$/,
