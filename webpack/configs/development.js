@@ -20,10 +20,12 @@ module.exports = env => ({
   },
   plugins: [
     new HtmlWebpackPlugin({
+      inject: false,
       template: './index.html',
       filename: './index.html',
     }),
     new HtmlWebpackPlugin({
+      inject: false,
       template: './html/index-identify.html',
       filename: './html/index-identify.html',
     }),
