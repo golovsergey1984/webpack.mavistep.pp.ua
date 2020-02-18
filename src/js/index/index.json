@@ -57,7 +57,7 @@
   },
   {
     "li_class": "li-index",
-    "form_action": "http://mavistep.pp.ua/",
+    "form_action": "",
     "form_target": "_self",
     "form_id": "",
     "btn_type": "submit",
