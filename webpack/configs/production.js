@@ -45,7 +45,7 @@ module.exports = env => ({
     new HtmlWebpackPlugin({
       template: './index.html',
       filename: './index.html',
-      inject: false,
+
       minify: {
         collapseWhitespace: true,
         removeComments: true,
