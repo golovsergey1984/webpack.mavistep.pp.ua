@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Webpack App</title>
-  </head>
+  <link rel="shortcut icon" href="favicon.ico"><link href="../index.3.18d61db66aaed86162bf.css" rel="stylesheet"><link href="../identify.2.34a5c9174c6f7bcc19ec.css" rel="stylesheet"></head>
   <body>
-  </body>
+  <script type="text/javascript" src="../runtime.3cdfb26605c6020f6b54.js"></script><script type="text/javascript" src="../vendors.9b7122f1d53dd241aa67.js"></script><script type="text/javascript" src="../index.f86896f79552c0144e5a.js"></script><script type="text/javascript" src="../identify.aae12f49cd1b1f48dbec.js"></script></body>
 </html>

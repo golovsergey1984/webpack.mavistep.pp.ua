@@ -41,7 +41,7 @@ module.exports = env => ({
     new HtmlWebpackPlugin({
       template: './index.html',
       filename: './index.html',
-      inject: false,
+
       minify: {
         collapseWhitespace: true,
         removeComments: true,
@@ -54,7 +54,7 @@ module.exports = env => ({
     new HtmlWebpackPlugin({
       template: './html/index-identify.html',
       filename: './html/index-identify.html',
-      inject: false,
+
       minify: {
         collapseWhitespace: true,
         removeComments: true,
@@ -67,7 +67,6 @@ module.exports = env => ({
     new HtmlWebpackPlugin({
       favicon: './favicon/favicon.ico',
       filename: './favicon/favicon.ico',
-      inject: false,
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
