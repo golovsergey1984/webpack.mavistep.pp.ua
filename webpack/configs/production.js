@@ -27,6 +27,10 @@ module.exports = env => ({
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
       },
       {
+        test: /\.txt$/i,
+        use: 'raw-loader',
+      },
+      {
         test: /\.scss$/,
         use: [
           MiniCssExtractPlugin.loader,
