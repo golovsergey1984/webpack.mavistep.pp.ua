@@ -78,7 +78,7 @@ module.exports = env => ({
     new CopyPlugin([
       { from: paths.SRC_DIR + '/images', to: `images` },
       { from: paths.SRC_DIR + '/favicon', to: `favicon` },
-      { from: paths.SRC_DIR + '/entry', to: `./` },
+      /*  { from: paths.SRC_DIR + '/entry', to: `./` }, */
       /*  { from: paths.SRC_DIR + '/static', to: `static` }, */
     ]),
   ],
