@@ -1,8 +1,8 @@
-import location from './location.json';
-import payment from './payment.json';
-import loyality from './loyality.json';
-import usage from './usage.json';
-import products from './products.json';
+import location from './json/location.json';
+import payment from './json/payment.json';
+import loyality from './json/loyality.json';
+import usage from './json/usage.json';
+import products from './json/products.json';
 import itemsTemplate from '../../templates/share_questions.hbs';
 
 const refs = {

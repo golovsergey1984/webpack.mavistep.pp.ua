@@ -1,5 +1,8 @@
 'use strict';
+import getDate from './getDate.js'; // Определяем текущую дату
+import getTime from './getTime.js'; /* import getTimer from './getTimer.js'; */ // Определяем время начала работы // Таймер // Определяем текущую дату
 import PNotify from 'pnotify/dist/es/PNotify.js';
+
 import PNotifyButtons from 'pnotify/dist/es/PNotifyButtons.js';
 import PNotifyStyleMaterial from 'pnotify/dist/es/PNotifyStyleMaterial.js';
 PNotify.defaults.styling = 'material';
@@ -15,21 +18,14 @@ window.closeWindow = closeWindow;
 window.prevPage = prevPage;
 
 // Объявляем переменные для отчета
-let arrPage = [];
-let arrData = [];
-let undefined = 'Пусто';
-let answerPlace = '';
-let date = getDate();
-let time = getTime();
-let clockTime = clock();
-let answerPayment = '';
-let answerLoyality = '';
-let answerUsage = '';
-let answerProduct = '';
+let arrPage = []; // Создаем массив для фиксации какие id были пройдены User
+let data = { Share: {}, Index: {}, Place: {} }; // Создаем объект
+let clockTime = clock(); // Запускаем таймер
+data.Index.date = '<br>' + getDate.getDate(); // записываем текущую дату в объект
+data.Index.time = '<br>' + getTime.getTime(); // записываем время начала работы
 
 // Объявляем переменные для функций
 const refs = {
-  /* window: window.addEventListener, */
   location: document.getElementById('Place'),
   payment: document.getElementById('Payment'),
   loyality: document.getElementById('Loyality'),
@@ -37,67 +33,49 @@ const refs = {
   products: document.getElementById('Products'),
 };
 
-/* refs.window('beforeload', event => {
-  event.preventDefault();
-  getDate().arrData.push();
-  getTime().arrData.push();
-  console.log(arrData);
-}); */
-
-// При первом клике, запускаем формирование отчета
-function start() {
-  arrData.push(getDate());
-  arrData.push(getTime());
-}
-// Функция заполнения массива данных для отчета
-function addArrayData(item) {
-  arrData.push(item);
-  console.log(arrData);
-}
-
 // Формируем массив из пройденных User разжедов (id)
 function addArrayPage(item) {
   arrPage.push(item);
 }
 
+// Вызываем всплывающее уведомление
+function pNotify() {
+  let notice = PNotify.notice({
+    title: 'Infomessage',
+    text: 'This is a first page!',
+    animateSpeed: 'slow',
+    delay: 1000,
+    addClass: 'custom nonblock',
+  });
+  notice.on('click', function() {
+    notice.close();
+  });
+}
+
 // Реализовываем возврат назад
 function prevPage() {
-  console.log(arrPage.length);
-
   if (arrPage.length == 1 || 0) {
-    PNotify.notice({
-      title: 'Infomessage',
-      text: 'This is a first page!',
-      animateSpeed: 'slow',
-    });
+    pNotify();
     return;
   } else {
     if (arrPage.length == 0) {
-      PNotify.notice({
-        title: 'Infomessage',
-        text: 'This is a first page!',
-        animateSpeed: 'slow',
-        delay: 1000,
-      });
+      pNotify();
       return;
     }
     let i = arrPage.length - 1;
+    let val = arrPage[i];
     document.getElementById(arrPage[i]).style.display = 'none';
     arrPage.pop();
-    arrData.pop();
+    delete data.Share.val;
     document.getElementById(arrPage[i - 1]).style.display = 'block';
-    console.log(arrPage);
-    /* console.log(arrData); */
   }
 }
 
 // Обработка блока Локация
 function getRadioValueLocation() {
-  /* start(); */
   let rad = document.getElementsByName('place-name');
-  answerPlace = radValue(rad);
-  addArrayData(radValue(rad));
   addArrayPage(refs.location.id);
+  data.Place.Location = '<strong>' + radValue(rad) + '</strong>';
   refs.location.style.display = 'none';
   refs.payment.style.display = 'block';
   addArrayPage(refs.payment.id);
@@ -106,8 +84,10 @@ function getRadioValueLocation() {
 // Обработка блока Форма оплаты
 function getRadioValuePayment() {
   let rad = document.getElementsByName('payment');
-  answerPayment = radValue(rad);
-  addArrayData(radValue(rad));
+  data.Share.Payment =
+    '<br><br><strong>_____ОБЩЯЯ ИНФОРМАЦИЯ_____</strong> <br><strong> 1. Форма расчета: </strong>' +
+    radValue(rad);
+
   refs.payment.style.display = 'none';
   refs.loyality.style.display = 'block';
   addArrayPage(refs.loyality.id);
@@ -116,20 +96,17 @@ function getRadioValuePayment() {
 // Обработка блока Форма Лояльность
 function getRadioValueLoyality() {
   let rad = document.getElementsByName('loyality');
-  answerLoyality = radValue(rad);
-  addArrayData(radValue(rad));
+  data.Share.Loyality =
+    '<br> <strong> 2. С Нашей продукцией: </strong>' + radValue(rad);
   refs.loyality.style.display = 'none';
   refs.usage.style.display = 'block';
   addArrayPage(refs.usage.id);
-  console.log(arrData);
-  alert(testReport());
 }
 
 // Обработка блока Форма Чем пользуюсь
 function getRadioValueUsage() {
   let rad = document.getElementsByName('usage');
-  answerUsage = radValue(rad);
-  addArrayData(radValue(rad));
+  data.Share.Usage = '<br><strong> 3. Пользуется: </strong>' + radValue(rad);
   refs.usage.style.display = 'none';
   refs.products.style.display = 'block';
   addArrayPage(refs.products.id);
@@ -138,12 +115,10 @@ function getRadioValueUsage() {
 // Обработка блока Форма Интересующая руппа товаров
 function getRadioValueProducts() {
   let rad = document.getElementsByName('products');
-  answerProduct = radValue(rad);
-  addArrayData(radValue(rad));
-  console.log(arrPage);
+  data.Share.Products =
+    '<br> <strong> 4. Группа запроса: </strong>' + radValue(rad);
+  mail();
   alert(testReport());
-
-  /* mail(); */
   setTimeout(close, 500);
   /* document.getElementById('Products').style.display = 'none'; */
   /* document.getElementById('Products').style.display = 'block'; */
@@ -151,7 +126,6 @@ function getRadioValueProducts() {
 
 // Определение выбора User в radio списке
 function radValue(rad) {
-  console.log(rad);
   for (let i = 0; i < rad.length; i++) {
     if (rad[i].checked) {
       return rad[i].value;
@@ -159,48 +133,6 @@ function radValue(rad) {
   }
 }
 
-// Определяем текущую дд.мм.гг
-function getDate() {
-  var day = new Date();
-
-  var weekday = new Array('Вc', 'Пy', 'Вт', 'Ср', 'Чтв', 'Птн', 'Сб');
-
-  var month = new Array(
-    'янв',
-    'фев',
-    'мар',
-    'апр',
-    'мая',
-    'июня',
-    'июля',
-    'авг',
-    'снт',
-    'окт',
-    'ноя',
-    'дек',
-  );
-
-  return (
-    weekday[day.getDay()] +
-    ' ' +
-    day.getDate() +
-    ' ' +
-    month[day.getMonth()] +
-    ' ' +
-    day.getFullYear() +
-    ' г.'
-  );
-}
-
-// Определяем время начала поиска товара by User
-function getTime() {
-  let day = new Date();
-  return (
-    day.getHours() + ':' + (day.getMinutes() < 10 ? '0' : '') + day.getMinutes()
-  );
-}
-
-// Секундомер, определяем длительность пребывания User на вкладке "Выбор товара"
 function clock() {
   let S = '00',
     M = '00',
@@ -235,38 +167,6 @@ function clock() {
   }, 1000);
 }
 
-// Формирование отчета
-function report() {
-  return (
-    '<strong>Магазин: </strong>' +
-    arrData[0] +
-    '<br />' +
-    '<strong>Когда: </strong>' +
-    date +
-    '<br />' +
-    '<strong>Время: </strong>' +
-    time +
-    '<br />' +
-    '<strong>Длительность: </strong>' +
-    clockTime +
-    '<br />' +
-    '<br />' +
-    '<strong>_____1. ОБЩЯЯ ИНФОРМАЦИЯ_____</strong>' +
-    '<br />' +
-    '<strong>1.1 Форма расчета: </strong>' +
-    arrData[1] +
-    '<br />' +
-    '<strong>1.2 С Нашей продукцией: </strong>' +
-    arrData[2] +
-    '<br />' +
-    '<strong>1.3 Пользуется: </strong>' +
-    arrData[3] +
-    '<br />' +
-    '<strong>1.4 Группа запроса: </strong>' +
-    arrData[4]
-  );
-}
-
 // Отправка отчета на mail
 function mail() {
   let stat = report();
@@ -281,97 +181,41 @@ function mail() {
   });
 }
 
-// Тестовая функция для alert()!!
-function testReport() {
-  let a = '';
-  if (arrData[4] == null) {
-    a = '';
-  } else {
-    a = arrData[4];
-  }
-
-  let b = '';
-  if (arrData[3] == null) {
-    b = '';
-  } else {
-    b = arrData[3];
-  }
-
-  let c = '';
-  if (arrData[2] == null) {
-    c = '';
-  } else {
-    c = arrData[2];
-  }
-
-  let d = '';
-  if (arrData[1] == null) {
-    d = '';
-  } else {
-    d = arrData[1];
-  }
+function report() {
+  data.Share.clock =
+    '<br><br><br><strong> Длительность сделки: </strong>' + clockTime + '<br>';
 
   return (
-    'Магазин: ' +
-    arrData[0] +
-    '\r\n' +
-    'Когда: ' +
-    date +
-    '\r\n' +
-    'Время: ' +
-    time +
-    '\r\n' +
-    'Длительность: ' +
-    clockTime +
-    '\r\n' +
-    '\r\n' +
-    '_____1. ОБЩЯЯ ИНФОРМАЦИЯ_____' +
-    '\r\n' +
-    '1.1 Форма расчета: ' +
-    /* arrData[1] */ d +
-    '\r\n' +
-    '1.2 С Нашей продукцией: ' +
-    /* arrData[2] */ c +
-    '\r\n' +
-    '1.3 Пользуется: ' +
-    /* arrData[3] */ b +
-    '\r\n' +
-    '1.4 Группа запроса: ' +
-    /* arrData[4] */ a
+    Object.values(data.Place) +
+    Object.values(data.Index) +
+    Object.values(data.Share)
   );
-
-  /* return (
-    'Магазин: ' +
-    answerPlace +
-    '\r\n' +
-    'Когда: ' +
-    date +
-    '\r\n' +
-    'Время: ' +
-    time +
-    '\r\n' +
-    'Длительность: ' +
-    clockTime +
-    '\r\n' +
-    '\r\n' +
-    '_____1. ОБЩЯЯ ИНФОРМАЦИЯ_____' +
-    '\r\n' +
-    '1.1 Форма расчета: ' +
-    answerPayment +
-    '\r\n' +
-    '1.2 С Нашей продукцией: ' +
-    answerLoyality +
-    '\r\n' +
-    '1.3 Пользуется: ' +
-    answerUsage +
-    '\r\n' +
-    '1.4 Группа запроса: ' +
-    answerProduct
-  ); */
 }
 
+// Тестовая функция для alert()!! для переноса юзаем '\r\n'
+function testReport() {
+  return (
+    data.Place.Location +
+    '\r\n' +
+    data.Index.date +
+    '\r\n' +
+    data.Index.time +
+    '\r\n' +
+    clockTime +
+    '\r\n' +
+    '\r\n' +
+    data.Share.Payment +
+    '\r\n' +
+    data.Share.Loyality +
+    '\r\n' +
+    data.Share.Usage +
+    '\r\n' +
+    data.Share.Product
+  );
+}
 // Вызываем, когда User закрывает вкладку
 window.addEventListener('beforeunload', event => {
+  event.preventDefault();
   mail();
   setTimeout(close, 500);
 });
@@ -387,16 +231,3 @@ function closeWindow() {
 function close() {
   window.close();
 }
-
-// Рабочая функция "екущие время"
-/* function clock() {
-  var date = new Date(),
-    hours = date.getHours() < 10 ? '0' + date.getHours() : date.getHours(),
-    minutes =
-      date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes(),
-    seconds =
-      date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds();
-  console.log(hours + ':' + minutes + ':' + seconds);
-  return hours + ':' + minutes;
-}
-setInterval(clock, 1000); */

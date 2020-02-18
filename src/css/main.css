@@ -96,6 +96,19 @@ ul {
   background-position: center;
 }
 
+[ui-pnotify].ui-pnotify.custom .ui-pnotify-text {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 50px;
+  color: black;
+  font-size: 14px;
+}
+
+[ui-pnotify].ui-pnotify.custom .ui-pnotify-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+
 .text {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
