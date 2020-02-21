@@ -45,7 +45,7 @@ module.exports = env => ({
     new HtmlWebpackPlugin({
       template: './index.html',
       filename: './index.html',
-
+      title: 'MAVI STEP',
       minify: {
         collapseWhitespace: true,
         removeComments: true,
@@ -58,7 +58,7 @@ module.exports = env => ({
     new HtmlWebpackPlugin({
       template: './html/index-identify.html',
       filename: './html/index-identify.html',
-
+      title: 'Identify',
       minify: {
         collapseWhitespace: true,
         removeComments: true,

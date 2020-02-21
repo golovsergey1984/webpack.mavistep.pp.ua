@@ -2,6 +2,9 @@
 import getDate from './getDate.js'; // Определяем текущую дату
 import getTime from './getTime.js'; /* import getTimer from './getTimer.js'; */ // Определяем время начала работы // Таймер // Определяем текущую дату
 import PNotify from 'pnotify/dist/es/PNotify.js';
+import testReport from './testReport.js';
+
+/* export default data; */
 
 import PNotifyButtons from 'pnotify/dist/es/PNotifyButtons.js';
 import PNotifyStyleMaterial from 'pnotify/dist/es/PNotifyStyleMaterial.js';
@@ -117,13 +120,14 @@ function getRadioValueProducts() {
   let rad = document.getElementsByName('products');
   data.Share.Products =
     '<br> <strong> 4. Группа запроса: </strong>' + radValue(rad);
-  mail();
-  alert(testReport());
+  console.log(data);
+  alert(testReport(data, data.Share.Products, clockTime));
+  /*   mail(); */
+
   setTimeout(close, 500);
   /* document.getElementById('Products').style.display = 'none'; */
   /* document.getElementById('Products').style.display = 'block'; */
 }
-
 // Определение выбора User в radio списке
 function radValue(rad) {
   for (let i = 0; i < rad.length; i++) {
@@ -131,6 +135,19 @@ function radValue(rad) {
       return rad[i].value;
     }
   }
+}
+// Отправка отчета на mail
+function mail() {
+  let stat = report();
+  Email.send({
+    Host: 'smtp.gmail.com',
+    Username: 'mavistepreport',
+    Password: 'MaviStep1996',
+    To: 'mavistepreport@gmail.com',
+    From: 'mavistepreport@gmail.com',
+    Subject: 'customer statistics',
+    Body: stat,
+  });
 }
 
 function clock() {
@@ -167,20 +184,6 @@ function clock() {
   }, 1000);
 }
 
-// Отправка отчета на mail
-function mail() {
-  let stat = report();
-  Email.send({
-    Host: 'smtp.gmail.com',
-    Username: 'mavistepreport',
-    Password: 'MaviStep1996',
-    To: 'mavistepreport@gmail.com',
-    From: 'mavistepreport@gmail.com',
-    Subject: 'customer statistics',
-    Body: stat,
-  });
-}
-
 function report() {
   data.Share.clock =
     '<br><br><br><strong> Длительность сделки: </strong>' + clockTime + '<br>';
@@ -192,27 +195,6 @@ function report() {
   );
 }
 
-// Тестовая функция для alert()!! для переноса юзаем '\r\n'
-function testReport() {
-  return (
-    data.Place.Location +
-    '\r\n' +
-    data.Index.date +
-    '\r\n' +
-    data.Index.time +
-    '\r\n' +
-    clockTime +
-    '\r\n' +
-    '\r\n' +
-    data.Share.Payment +
-    '\r\n' +
-    data.Share.Loyality +
-    '\r\n' +
-    data.Share.Usage +
-    '\r\n' +
-    data.Share.Product
-  );
-}
 // Вызываем, когда User закрывает вкладку
 window.addEventListener('beforeunload', event => {
   event.preventDefault();
