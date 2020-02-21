@@ -120,9 +120,9 @@ function getRadioValueProducts() {
   let rad = document.getElementsByName('products');
   data.Share.Products =
     '<br> <strong> 4. Группа запроса: </strong>' + radValue(rad);
-  console.log(data);
+
   alert(testReport(data, data.Share.Products, clockTime));
-  /*   mail(); */
+  mail();
 
   setTimeout(close, 500);
   /* document.getElementById('Products').style.display = 'none'; */
