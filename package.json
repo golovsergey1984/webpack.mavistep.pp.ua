@@ -58,7 +58,7 @@
     "ejs": "^3.0.1",
     "fs": "0.0.1-security",
     "gmail-send": "^1.8.10",
-    "handlebars": "^4.5.3",
+    "handlebars": "^4.7.7",
     "image-webpack-loader": "^6.0.0",
     "material-design-icons": "^3.0.1",
     "net": "^1.0.2",
